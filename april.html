@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YouTube</title>
+
+<style>
+
+body{
+margin:0;
+background:#0f0f0f;
+font-family:Arial, sans-serif;
+color:white;
+}
+
+/* Header */
+
+.header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px;
+background:#0f0f0f;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+.logo{
+color:red;
+font-weight:bold;
+font-size:20px;
+}
+
+.icons{
+font-size:20px;
+}
+
+/* Video */
+
+.video-container{
+position:relative;
+width:100%;
+background:black;
+cursor:pointer;
+}
+
+.thumbnail{
+width:100%;
+}
+
+.play{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+font-size:60px;
+opacity:0.9;
+}
+
+video{
+display:none;
+width:100%;
+}
+
+/* Title */
+
+.title{
+padding:10px;
+font-size:16px;
+font-weight:500;
+}
+
+.channel{
+padding:0 10px;
+color:#aaa;
+font-size:14px;
+}
+
+/* Recommended */
+
+.rec{
+display:flex;
+padding:10px;
+cursor:pointer;
+}
+
+.rec img{
+width:140px;
+height:80px;
+object-fit:cover;
+border-radius:8px;
+margin-right:10px;
+}
+
+.rec-title{
+font-size:14px;
+}
+
+/* Bottom bar */
+
+.bottom{
+position:fixed;
+bottom:0;
+width:100%;
+background:#0f0f0f;
+display:flex;
+justify-content:space-around;
+padding:8px 0;
+border-top:1px solid #222;
+}
+
+.bottom div{
+font-size:12px;
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- Header -->
+
+<div class="header">
+<div class="logo">YouTube</div>
+<div class="icons">🔍 📺 🔔</div>
+</div>
+
+<!-- Video -->
+
+<div class="video-container" onclick="playVideo()" id="thumb">
+<img src="assets/thumbnail.jpg" class="thumbnail">
+<div class="play">▶</div>
+</div>
+
+<video id="video" controls>
+<source src="assets/rickroll.mp4" type="video/mp4">
+</video>
+
+<div class="title">
+India's Biggest Secret Revealed | Dhruv Rathee
+</div>
+
+<div class="channel">
+Dhruv Rathee • 2.3M views • 4 hours ago
+</div>
+
+<!-- Recommended -->
+
+<div class="rec" onclick="playVideo()">
+<img src="assets/dhruv1.jpg">
+<div class="rec-title">
+India's Biggest Scam Explained | Dhruv Rathee
+</div>
+</div>
+
+<div class="rec" onclick="playVideo()">
+<img src="assets/dhruv2.jpg">
+<div class="rec-title">
+The Truth About Indian Economy | Dhruv Rathee
+</div>
+</div>
+
+<div class="rec" onclick="playVideo()">
+<img src="assets/dhruv3.jpg">
+<div class="rec-title">
+This Will Shock Every Indian | Dhruv Rathee
+</div>
+</div>
+
+<div style="height:60px"></div>
+
+<!-- Bottom Navigation -->
+
+<div class="bottom">
+<div>🏠<br>Home</div>
+<div>🔥<br>Shorts</div>
+<div>➕<br>Create</div>
+<div>📺<br>Subscriptions</div>
+<div>👤<br>You</div>
+</div>
+
+<script>
+
+function playVideo(){
+document.getElementById("thumb").style.display="none";
+var video = document.getElementById("video");
+video.style.display="block";
+video.play();
+}
+
+</script>
+
+</body>
+</html>
+```
